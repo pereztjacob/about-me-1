@@ -28,7 +28,7 @@ if (more.toLowerCase() === 'yes' || more.toLowerCase() === 'y' ) {
 } 
 
 else if ( more.toLowerCase() === 'no' || more.toLowerCase() === 'n' ) {
-    var evenMore = prompt( 'Acutally. I can play another instrument. You don\'t know me at all. How many do you think I can play?'); //technically 3rd question
+    var evenMore = prompt( 'Actually. I can play another instrument. You don\'t know me at all. How many do you think I can play?'); //technically 3rd question
     if ( evenMore === '2' || evenMore === '4' || evenMore === 'two' || evenMore === 'four') {
         alert( 'Close. I play 3. Mandolin. Guitar. And Bass.')
         console.log( 'How many instruments?', evenMore)
