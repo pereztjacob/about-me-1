@@ -15,13 +15,13 @@ if (play.toLowerCase() === 'yes' || play.toLowerCase() === 'y' ) {
 };
 
 //For question on if I play additional instruments.
-const more = prompt('Ok, ' + username + 'Do you think I can play any other instruments?');
+const more = prompt('Ok, ' + username + '. Do you think I can play any other instruments?');
 if (more.toLowerCase() === 'yes' || more.toLowerCase() === 'y' ) {
     console.log( 'Do I play other instruments? Answer:', more);
     const evenMore = prompt( 'Yep. I can play another instrument. How many do you think I can play?');
     // 3rd question asking how many inst can I play.
     if ( evenMore === '2' || evenMore === '4' || evenMore === 'two' || evenMore === 'four') {
-        alert( 'OOooo, ' + username + 'close. I play 3 instruments total. Mandolin, Guitar and Bass.');
+        alert( 'OOooo, ' + username + ' close. I play 3 instruments total. Mandolin, Guitar and Bass.');
         console.log( 'How many instruments can I play? Answer:', evenMore);
     }
     else if (evenMore === '3' || evenMore === 'three') {
@@ -51,12 +51,12 @@ else if ( more.toLowerCase() === 'no' || more.toLowerCase() === 'n' ) {
 }
 
 // Question four about my favorite genre
-const genre = prompt( 'Ok, moving on.' + username + ', is my favorite genre acoustic instrumental?' );
+const genre = prompt( 'Ok, moving on. ' + username + ', is my favorite genre acoustic instrumental?' );
 if (genre.toLowerCase() === 'yes' || genre.toLowerCase() === 'y' ) {
     confirm( 'You damn skippy it is!');
     console.log( 'Is my favorite genre acoustic instrumental? Answer:', genre);
 } else if ( genre.toLowerCase() === 'no' || genre.toLowerCase() === 'n' ) {
-    alert( 'I know it sounds weird but it is.' + username + '! You should check it out.' );
+    alert( 'I know it sounds weird but it is. ' + username + '! You should check it out.' );
     console.log( 'Is my favorite genre acoustic instrumental? Answer:', genre);
 };
 
@@ -73,7 +73,7 @@ if (oregon.toLowerCase() === 'yes' || oregon.toLowerCase() === 'y' ) {
 alert('You made it through the most boring "Get-to-know-me" ever! Here is a bit more about me and what I\'m doing now. You must be reeeeeally bored.');
 
 
-alert( 'Fooled you!! More questions. Muahahaha!' + username + ', now comes the guessing game.');
+alert( 'Fooled you!! More questions. Muahahaha ' + username + ', now comes the guessing game.');
 
 //Number guessing game for my age.
 
@@ -100,18 +100,18 @@ alert( 'Fooled you!! More questions. Muahahaha!' + username + ', now comes the g
 //         console.log(myAge);
 //         i++;
 //     }
-// } I CANNOT GET THIS TO WORK AND I'm TIRED!!! :(
+// } I CANNOT GET THIS TO WORK AND I'M TIRED!!! :(
 
 //Question 7 Guessing which genre of music I currently play.
 const mKind = [ 'rock' , 'acoustic' , 'celtic' ];
 
-let mPlay = prompt( 'What is one genre of music from these 6 that I currently play.' );
+let mPlay = prompt( 'What is one genre of music I currently play.' );
 let guess = 0;
 
 while (guess < 5) {
 
     if (mKind.includes(mPlay)) {
-        confirm('You got it, ' + username + '! I play Rock, Acoustic and Celtic music.');
+        confirm('You got it, ' + username + '! Well done. I play Rock, Acoustic and Celtic music.');
         break;
         console.log(mPlay);
     }
