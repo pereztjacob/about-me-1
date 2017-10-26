@@ -75,19 +75,38 @@ confirm('Hi ' + username);
 
 // // alert( 'Fooled you!! More questions. Muahahaha!' + username + ', now comes the guessing game.');
 
+//Number guessing game for my age.
+const age = 34;
+
+//Initial age guessing info
+alert( 'To get to know me more let\'s see if you can guess my age. I\'ll give a hint. It\s between 30 to 40' );
+
+let myAge = prompt('Ok. Ready, ' + username + '? How old am I? You uhave 4 tries' ).toLowerCase;
+let guess = 0;
+
+for ( guess = 0; guess < 3; guess++) {
+    if ( myAge = 30 ) {
+        alert('Nope! Too low. Try again. You have ' + (3 - guess) + 'remaining');
+    }
+
+    else {
+        alert( 'Nah, Brah' );
+    }
+}
+
+//Question 7 Guessing which genre of music I currently play.
 const mKind = [ 'rock' , 'acoustic' , 'celtic' ];
 
 let mPlay = prompt( 'What is one genre of music from these 6 that I currently play.' );
 
-let guess = 0;
+// let guess = 0;
 while (guess < 5) {
-    // console.log(mKind.includes(mPlay));
-    // console.log(mPlay);
 
     if (mKind.includes(mPlay)) {
         confirm('You got it, ' + username + '! I play Rock, Acoustic and Celtic music.');
         break;
-    }
+        console.log(mPlay);
+    } 
     else if (!mKind.includes(mPlay)) {
         mPlay = prompt('Not quite correct. Guess again. ' + username + ' You have ' + (5 - guess) + ' tries remaining.');
         guess++;
