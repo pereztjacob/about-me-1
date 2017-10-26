@@ -1,8 +1,8 @@
-// 'use strict';
+'use strict';
 
 // // // Greeting asking user's name
-// // const username = prompt( 'Hello and welcome. What is your name?' );
-// // confirm('Hi ' + username);
+const username = prompt( 'Hello and welcome. What is your name?' );
+confirm('Hi ' + username);
 
 // // //Initial question on if I can play guitar.
 // // const play = prompt(username + ', can I play the guitar?');
@@ -77,7 +77,7 @@
 
 const mKind = [ 'rock' , 'acoustic' , 'celtic' ];
 
-let mPlay = prompt( 'What genre of music from these 6 do I currently play. Rock. Acoustic. Celtic. Metal, Latin or Pop' );
+let mPlay = prompt( 'What is one genre of music from these 6 that I currently play.' );
 
 let guess = 0;
 while (guess < 5) {
@@ -85,11 +85,16 @@ while (guess < 5) {
     // console.log(mPlay);
 
     if (mKind.includes(mPlay)) {
-        confirm('You got it! I play Rock, Acoustic and Celtic music.');
+        confirm('You got it, ' + username + '! I play Rock, Acoustic and Celtic music.');
         break;
     }
-    else {
-        mPlay = prompt('Not quite correct. Guess again. You have ' + (5 - guess) + ' tries remaining.');
+    else if (!mKind.includes(mPlay)) {
+        mPlay = prompt('Not quite correct. Guess again. ' + username + ' You have ' + (5 - guess) + ' tries remaining.');
         guess++;
+    
+    }
+
+    if (!mKind.includes(mPlay) && (5 - guess) === 0) {
+        alert( 'Awww, looks like you\'re out of guesses. I currently play Rock, Acoustic and Celtic music' );
     }
 }
