@@ -71,39 +71,62 @@ let score = 0;
 //     console.log( 'Am I from oregon? Answer:', oregon);
 // };
 
-// alert('You made it through the most boring "Get-to-know-me" ever! Here is a bit more about me and what I\'m doing now. You must be reeeeeally bored.');
+alert('You made it through the most boring "Get-to-know-me" ever! Here is a bit more about me and what I\'m doing now. You must be reeeeeally bored.');
 
 
-// alert( 'Fooled you!! More questions. Muahahaha ' + username + ', now comes the guessing game.');
+alert( 'Fooled you!! More questions. Muahahaha ' + username + ', now comes the guessing game. To get to know me more let\'s see if you can guess my age. I\'ll give a hint. It\s between 30 and 40');
 
 //Number guessing game for my age.
 
 //Initial age guessing info
-alert( 'To get to know me more let\'s see if you can guess my age. I\'ll give a hint. It\s between 30 and 40' );
+
+
+functon quest6 () {
+    const age = 34;
+    let myAge = parseInt( prompt('Ok. Ready, ' + username + '? How old am I? You have 4 tries' ) );
+    
+    
+    for (let i = 0; i < 3; i++) {
+        if ( myAge === age) {
+            alert('Well, I\'ll be! That\'s correct' + username + 'I am ' + age);
+            console.log(myAge);
+            break;
+        }
+    
+        else if ( myAge <= age ) {
+            myAge = parseInt( prompt('Nope! Too low. Try again. You have ' + (3 - i) + ' tries remaining') );
+            console.log(myAge);
+        }
+    
+        else if (myAge >= age) {
+            myAge = parseInt( prompt('Nope! Too high. Try again. You have ' + (3 - i) + ' tries remaining') );
+            console.log(myAge);
+        }
+    }
+}
 
 const age = 34;
-const myAge = prompt('Ok. Ready, ' + username + '? How old am I? You have 4 tries' );
+let myAge = parseInt( prompt('Ok. Ready, ' + username + '? How old am I? You have 4 tries' ) );
 
 
 for (let i = 0; i < 3; i++) {
-    if ( myAge === 34) {
+    if ( myAge === age) {
         alert('Well, I\'ll be! That\'s correct' + username + 'I am ' + age);
         console.log(myAge);
         break;
     }
 
-    else if ( myAge <= 33 ) {
-        prompt('Nope! Too low. Try again. You have ' + (3 - i) + ' tries remaining');
+    else if ( myAge <= age ) {
+        myAge = parseInt( prompt('Nope! Too low. Try again. You have ' + (3 - i) + ' tries remaining') );
         console.log(myAge);
     }
 
-    else if (myAge >= 35) {
-        prompt('Nope! Too high. Try again. You have ' + (3 - i) + ' tries remaining');
+    else if (myAge >= age) {
+        myAge = parseInt( prompt('Nope! Too high. Try again. You have ' + (3 - i) + ' tries remaining') );
         console.log(myAge);
     }
 }
 
-quest7();
 
 function quest7 () {
     //Question 7 Guessing which genre of music I currently play.
